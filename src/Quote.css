@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@600&family=Quicksand:wght@300&display=swap");
+
+.quote-container {
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.quote-item {
+  padding: 10px;
+  background-color: #f9f5ee;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-family: "Acme", sans-serif;
+  font-size: 20px;
+  color: #964b00;
+}
+
+button.quote-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #964b00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins" sans-serif;
+}
