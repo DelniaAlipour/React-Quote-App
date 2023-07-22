@@ -3,9 +3,11 @@ import "./Quote.css"; // Import the CSS file for styling
 
 function Quote() {
   const [quote, setQuote] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetchRandomQuote();
+    setIsLoading(false);
   }, []);
 
   const fetchRandomQuote = () => {
@@ -16,11 +18,15 @@ function Quote() {
 
   return (
     <div className="quote-container">
-      {quote && (
-        <div className="quote-item">
-          <p>"{quote.quote}"</p>
-          <p>- {quote.author}</p>
-        </div>
+      {isLoading ? (
+        <p>Quote is loading...</p>
+      ) : (
+        quote && (
+          <div className="quote-item">
+            <p>"{quote.quote}"</p>
+            <p>- {quote.author}</p>
+          </div>
+        )
       )}
       <button className="quote-button" onClick={fetchRandomQuote}>
         Get new quote
