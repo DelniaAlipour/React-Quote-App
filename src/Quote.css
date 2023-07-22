@@ -5,7 +5,8 @@
   max-width: 500px;
 }
 
-.quote-item {
+.quote-item,
+p {
   padding: 10px;
   background-color: #f9f5ee;
   margin-bottom: 10px;

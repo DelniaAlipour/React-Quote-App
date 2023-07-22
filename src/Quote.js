@@ -7,13 +7,15 @@ function Quote() {
 
   useEffect(() => {
     fetchRandomQuote();
-    setIsLoading(false);
   }, []);
 
   const fetchRandomQuote = () => {
     fetch("https://delniaalipour-quote-server.glitch.me/quotes/random")
       .then((response) => response.json())
-      .then((data) => setQuote(data));
+      .then((data) => {
+        setQuote(data);
+        setIsLoading(false);
+      });
   };
 
   return (
